@@ -1,0 +1,22 @@
+#268. Missing Number
+
+#Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
+
+from ast import List
+
+
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        com=[]
+        for i in range(0,len(nums)+1):
+            if i not in nums:
+                return i
+        return -1
+    
+    
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        n = len(nums)
+        expected_sum = n * (n + 1) // 2  
+        actual_sum = sum(nums)
+        return expected_sum - actual_sum

@@ -1,10 +1,11 @@
+from ast import List
 import heapq
 nums =[3,2,1,5,6,4]
 k=2
 heapq.heapify(nums)
 print(nums)
 
-ef sortedSquares(self, nums: List[int]) -> List[int]: # type: ignore
+def sortedSquares(self, nums: List[int]) -> List[int]: 
     l = 0
     r = len(nums) - 1
     result = []

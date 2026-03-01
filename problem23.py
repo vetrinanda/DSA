@@ -33,6 +33,7 @@ Explanation: The ranges are:
 [2,4] --> "2->4"
 [6,6] --> "6"
 [8,9] --> "8->9"
+This code can have yrt another solution also
 '''
 
 

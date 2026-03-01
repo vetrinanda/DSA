@@ -18,6 +18,7 @@ Example 2:
 
 Input: s = "axc", t = "ahbgdc"
 Output: false
+This code can have yrt another solution also
 '''
 
 from typing import List

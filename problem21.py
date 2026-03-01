@@ -32,6 +32,7 @@ Constraints:
 
 1 <= n <= 1000
 -105 <= nums[i] <= 105
+This code can have yrt another solution also
 '''
 
 from typing import List

@@ -32,3 +32,28 @@ Explanation: The 1st diagram denotes the initial linked list and the 2nd diagram
 There are no pairs of adjacent nodes, so we return the initial linked list.'''
 
 
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+import math
+from typing import Optional
+
+from problem14 import ListNode
+
+
+class Solution:
+    def insertGreatestCommonDivisors(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        prev=head
+        cur=head.next
+
+        while cur:
+            gcd= math.gcd(cur.val,prev.val)
+            g=ListNode(gcd)
+            prev.next=g
+            g.next=cur
+            prev=cur
+            cur=cur.next
+        
+        return head

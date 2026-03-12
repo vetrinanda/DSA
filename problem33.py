@@ -27,3 +27,42 @@ Output: [8,9,9,9,0,0,0,1]
  '''
  
  
+#  Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+from typing import Optional
+
+from problem18 import ListNode
+
+
+class Solution:
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+        l1_values=[]
+        l2_values=[]
+        curr=l1
+
+        while curr:
+            l1_values.append(str(curr.val))
+            curr=curr.next
+        
+        curr = l2                          # fix 1: traverse l2
+        while curr:
+            l2_values.append(str(curr.val))
+            curr = curr.next
+
+        l1_values=l1_values[::-1]
+        l2_values=l2_values[::-1]
+
+        l1_num=int(''.join(l1_values))
+        l2_num=int(''.join(l2_values))
+
+        new_digits=str(l1_num+l2_num)[::-1]
+        dummy=ListNode()
+        curr=dummy
+
+        for d in new_digits:
+            curr.next=ListNode(int(d))
+            curr=curr.next
+        return dummy.next

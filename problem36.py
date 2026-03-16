@@ -6,7 +6,7 @@ Companies
 Hint
 Given a string s, return the longest palindromic substring in s.
 
- 
+There are multiple methods as well just look into it 
 
 Example 1:
 
